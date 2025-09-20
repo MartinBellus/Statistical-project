@@ -1,5 +1,11 @@
 # Štatistická práca - Martin Belluš - Coffeine Effect on Sleep
 
+Dáta, ktoré budem skúmať, pochádzajú z datasetu: [Caffeine Intake Tracker](https://www.kaggle.com/datasets/prekshad2166/caffeine-intake-tracker-csv).
+
+Tento dataset obsahuje anonymné údaje o denných dávkach kofeínu a kvalite spánku
+viacerých ľudí. Každý záznam navyše obsahuje informácie o čase (ráno, poobede,
+večer) a forme konzumácie (káva, čaj, energetický nápoj).
+
 ---
 
 ## Korelácia kofeínu a spánku
@@ -28,9 +34,8 @@ Tea - Testing correlation between caffeine_mg and sleep_quality
 Pearson correlation: r = 0.082, p = 0.8697615652798727
 ```
 
-Pearsonov koeficient pre čaj je nečakane kladný, preto spravím ešte test pre
-alternatívnu hypotézu, že čaj má pozitívnu koreláciu s kvalitou spánku.
-Výsledok:
+Pearsonov koeficient pre čaj je kladný, preto spravím ešte test pre alternatívnu
+hypotézu, že čaj má pozitívnu koreláciu s kvalitou spánku. Výsledok:
 
 ```
 Tea Positive - Testing correlation between caffeine_mg and sleep_quality
@@ -38,12 +43,13 @@ Pearson correlation: r = 0.082, p = 0.13023843472012667
 ```
 
 Hodnota p pre kávu je väčšia ako 0.05, preto zamietam nulovú hypotézu. Teda
-existuje silná negatívna korelácia medzi množstvom skonzumovaného kofeínu z kávy
-a kvalitou spánku.
+existuje negatívna korelácia medzi množstvom skonzumovaného kofeínu z kávy a
+kvalitou spánku.
 
 Pre čaj je hodnota p menšia ako 0.05, preto nulovú hypotézu nemôžem zamietnuť.
 
-Na záver ešte vykreslím grafy kvality spánku v závislosti od množstva kofeínu:
+Na záver ešte vykreslím grafy kvality spánku v závislosti od množstva kofeínu
+pre jednotlivé nápoje:
 
 ![Coffee](./img/coffee_plot.png)
 
@@ -59,7 +65,7 @@ kvalitou spánku.
 
 Budem chcieť spočítať koeficienty rovnice `sleep_quality = x1 *
 morning_caffeine_mg + x2 * afternoon_caffeine_mg + x3 * evening_caffeine_mg +
-b`.
+const`.
 
 Zdrojový kód testu sa nachádza v súbore
 [src/regression.py](./src/regression.py).
