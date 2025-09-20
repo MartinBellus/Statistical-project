@@ -1,4 +1,4 @@
-# Štatistická práca - Martin Belluš - Coffeine Effect on Sleep
+# Štatistická práca - Martin Belluš - Caffeine Effect on Sleep
 
 Dáta, ktoré budem skúmať, pochádzajú z datasetu: [Caffeine Intake Tracker](https://www.kaggle.com/datasets/prekshad2166/caffeine-intake-tracker-csv).
 
